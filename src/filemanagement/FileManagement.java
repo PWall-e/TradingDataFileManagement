@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-
 public class FileManagement {
-
-	//final String filepath;
 
 	public void readingFile() throws IOException {
 		String[] field;
@@ -21,13 +18,11 @@ public class FileManagement {
 		Scanner filePath = new Scanner(System.in);
 		System.out.print("Please enter the File Path: ");
 		String filepath = filePath.nextLine();
-		
-		System.out.println(filepath);
+	
 		name =  filepath.split("\\.");
-		System.out.println(name[1]);
 		
 		Scanner inputParser = new Scanner(System.in);
-		System.out.print("Enter the Time Divisor: ");
+		System.out.print("Enter the Minute Divisor: ");
 		int timeDivizor = inputParser.nextInt();
 		
 		BufferedReader buffReader = new BufferedReader(new FileReader(filepath));
@@ -52,8 +47,9 @@ public class FileManagement {
 				}
 			}
 			
-		buffReader.close();
-		writer.close();
+			filePath.close(); inputParser.close(); //Close Scanners
+		buffReader.close(); //Close reader
+		writer.close(); //Close writer
 	}
 	
 	public static void main(String[] args) {
