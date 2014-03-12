@@ -48,7 +48,7 @@ public class FileManagement {
 	}
 	
 	public static void main(String[] args) {
-		try {
+		try {//wee
 			readingFile();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
